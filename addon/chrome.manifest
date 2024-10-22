@@ -1,0 +1,3 @@
+content	text_exporter	chrome/content/
+overlay chrome://zotero/content/zoteroPane.xul chrome://text_exporter/content/overlay.xul
+overlay chrome://zotero/content/preferences/preferences.xul chrome://text_exporter/content/preferences.xul

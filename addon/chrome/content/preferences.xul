@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<overlay id="TextExporter-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<prefwindow id="zotero-prefs">
+
+    <prefpane label="导出选项" id="text-exporter-perfpane" insertafter="zotero-prefpane-advanced">
+        <preferences>
+            <preference id="pref-text-exporter-baseDirTitleAbstract" name="extensions.text_exporter.baseDirTitleAbstract" type="string"/>
+            <preference id="pref-text-exporter-baseDirFullText" name="extensions.text_exporter.baseDirFullText" type="string"/>
+            <preference id="pref-text-exporter-contentTypeFilter-html" name="extensions.text_exporter.contentTypeFilter_html_checkbox" type="bool"/>
+            <preference id="pref-text-exporter-contentTypeFilter-pdf" name="extensions.text_exporter.contentTypeFilter_pdf_checkbox" type="bool"/>
+        </preferences>
+
+        <tabbox id="text-exporter-tabbox">
+            <tabs id="text-exporter-tabs">
+                <tab label="导出路径"/>
+                <!-- <tab label="内容类型过滤器"/> -->
+            </tabs>
+
+            <tabpanels id="text-exporter-tabpanels">
+                <tabpanel orient="vertical">
+                    <groupbox>
+                        <caption label="标题摘要导出"/>
+                        <description style="width: 420px">标题摘要导出路径（默认为用户主目录下的 Zotero-export\titleAbstract）</description>
+                        <separator/>
+                        <hbox style="margin: 0" align="center">
+                            <textbox id="id-text-exporter-baseDirTitleAbstract" preference="pref-text-exporter-baseDirTitleAbstract" flex="1"/>
+                        </hbox>
+                    </groupbox>
+                    <separator/>
+                    <groupbox>
+                        <caption label="全文导出"/>
+                        <description style="width: 420px">全文导出路径（默认为用户主目录下的 Zotero-export\fulltext）</description>
+                        <separator/>
+                        <hbox style="margin: 0" align="center">
+                            <textbox id="id-text-exporter-baseDirFullText" preference="pref-text-exporter-baseDirFullText" flex="1"/>
+                        </hbox>
+                    </groupbox>
+                <!-- <tabpanel orient="vertical"> -->
+                    <groupbox>
+                        <caption label="内容类型过滤器"/>
+                        <description style="width: 420px">选择要导出的文件类型</description>
+                        <separator/>
+                        <checkbox id="contentTypeFilter-html" label="HTML" preference="pref-text-exporter-contentTypeFilter-html"/>
+                        <checkbox id="contentTypeFilter-pdf" label="PDF" preference="pref-text-exporter-contentTypeFilter-pdf"/>
+                    </groupbox>
+                <!-- </tabpanel> -->
+                </tabpanel>
+            </tabpanels>
+        </tabbox>
+    </prefpane>
+
+    <!-- <script src="chrome://text_exporter/content/overlay.js"/> -->
+
+</prefwindow>
+</overlay>

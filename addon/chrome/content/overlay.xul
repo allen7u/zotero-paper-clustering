@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<overlay id="TextExporter-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <menupopup id="zotero-itemmenu">
+    <menuitem id="zotero-itemmenu-TextExporter"
+              label="导出摘要"
+              oncommand="Zotero.TextExporter.exportItems()"/>
+    <menuitem id="zotero-itemmenu-TextExporter-cluster"
+              label="按摘要聚类"
+              oncommand="Zotero.TextExporter.exportItemsAndRunPython()"/>
+    <menuitem id="zotero-itemmenu-fulltextexport"
+              label="导出全文"
+              oncommand="Zotero.TextExporter.exportFullText()"/>
+    <menuitem id="zotero-itemmenu-fulltextexport-cluster"
+              label="按全文聚类"
+              oncommand="Zotero.TextExporter.exportFullTextAndRunPython()"/>
+        <!-- 新增的菜单项：合并并导出摘要 -->
+    <menuitem id="zotero-itemmenu-TextExporter-concat"
+              label="合并摘要并导出"
+              oncommand="Zotero.TextExporter.exportItemsConcatAndCopy()"/>              
+    <!-- 新增的菜单项：合并并导出全文 -->
+    <menuitem id="zotero-itemmenu-fulltextexport-concat"
+              label="合并全文并导出"
+              oncommand="Zotero.TextExporter.exportFullTextConcatAndCopy()"/>
+    <!-- 新增的菜单项：合并并导出基本信息 -->
+    <menuitem id="zotero-itemmenu-TextExporter-basic-info-concat"
+              label="合并基本信息并导出"
+              oncommand="Zotero.TextExporter.exportItemsBasicInfoConcatAndCopy()"/>
+  </menupopup>
+  <!-- <menupopup id="menu_ToolsPopup">
+    <menuitem id="text-exporter-options" insertafter="menu_preferences" label="导出选项" oncommand="Zotero.TextExporter.openPreferenceWindow();"/>
+  </menupopup> -->
+  <script src="overlay.js"/>
+  <!-- <script src='TextExporter.js'/> -->
+</overlay>
